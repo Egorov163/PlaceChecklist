@@ -1,3 +1,25 @@
-﻿<div>
-    Hello
+﻿@model IndexViewModel
+@section Style {
+    <link rel="stylesheet" href="/css/main.css?v=1">
+}
+<div class="main">
+    <div class="centre">
+
+        <div class="the-title-of-the-list-of-shares">
+
+            <div>Заведения</div>
+        </div>
+
+        <div class="list-of-shares">
+
+            @foreach (var establishment in Model.Establishments)
+            {
+                <div class="table-of-shares">
+
+                    <div>@establishment.Name</div>
+                </div>
+            }
+        </div>
+
+    </div>
 </div>
