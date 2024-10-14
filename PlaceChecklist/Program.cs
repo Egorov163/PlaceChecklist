@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using PlaceChecklist.BusinessService;
 using PlaceChecklist.DbStuff;
+using PlaceChecklist.DbStuff.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,12 @@ builder.Services.AddDbContext<WebDbContext>(x => x.UseSqlServer(connectionString
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//BusinnesService
+builder.Services.AddScoped<EstablishmentsBusinessService>();
+
+//Repositories
+builder.Services.AddScoped<EstablishmentRepository>();
 
 var app = builder.Build();
 
