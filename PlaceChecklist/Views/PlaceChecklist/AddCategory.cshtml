@@ -1,0 +1,18 @@
+﻿@model AddCategoryViewModel
+
+
+<form method="post">
+    
+    <div>
+        Название категории
+        @Html.TextBoxFor(x => x.Name)
+    </div>
+    <div>
+        Описание категории
+        @Html.TextBoxFor(x => x.Description)
+    </div>
+
+    <div>
+        <input type="submit" value="Добавить категорию" />
+    </div>
+</form>

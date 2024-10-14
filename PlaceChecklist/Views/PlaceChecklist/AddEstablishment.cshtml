@@ -1,0 +1,25 @@
+﻿@model AddEstablishmentViewModel
+
+
+<form method="post">
+    
+    <div>
+        Название места
+        @Html.TextBoxFor(x => x.Name)
+    </div>
+    <div>
+        Описание места
+        @Html.TextBoxFor(x => x.Description)
+    </div>
+
+    <div>
+        Выберите тег @Html.DropDownList("tagId", Model.Tags)
+    </div>
+    <div>
+        Выберите категорию @Html.DropDownList("categoryId", Model.Category)
+    </div>
+
+    <div>
+        <input type="submit" value="Добавить тег" />
+    </div>
+</form>

@@ -1,0 +1,18 @@
+﻿@model AddTagViewModel
+
+
+<form method="post">
+    
+    <div>
+        Название тега
+        @Html.TextBoxFor(x => x.Name)
+    </div>
+    <div>
+        Описание тега
+        @Html.TextBoxFor(x => x.Description)
+    </div>
+
+    <div>
+        <input type="submit" value="Добавить тег" />
+    </div>
+</form>

@@ -16,6 +16,9 @@ builder.Services.AddScoped<EstablishmentsBusinessService>();
 
 //Repositories
 builder.Services.AddScoped<EstablishmentRepository>();
+builder.Services.AddScoped<TagRepository>();
+builder.Services.AddScoped<CategoryRepository>();
+
 
 var app = builder.Build();
 
